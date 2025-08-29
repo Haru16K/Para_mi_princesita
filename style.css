@@ -1,0 +1,103 @@
+/* style.css */
+body {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+  margin-top: 50px;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  display: inline-block;
+}
+
+/* Título */
+h1 {
+  color: #e60073;
+  margin-bottom: 20px;
+}
+
+/* Imagen normal (fuera del carrusel) */
+.foto {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin: 15px 0;
+}
+
+/* Botones */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  background: #e60073;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover { background: #ff4081; }
+
+/* SWIPER / CARRUSEL */
+.swiper {
+  width: 100%;
+  max-width: 600px;   
+  height: 650px;      
+  margin: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #000; 
+}
+
+/* Imágenes dentro del carrusel */
+.swiper-slide img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; 
+  border-radius: 12px;
+  background: #000;
+}
+
+/* Flechas de navegación */
+.swiper-button-next, .swiper-button-prev {
+  color: #fff !important;
+  width: 44px;
+  height: 44px;
+  background: rgba(230,0,115,0.95);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 16px;
+}
+
+/* Paginación */
+.swiper-pagination { 
+  z-index: 25; 
+  bottom: 12px; 
+}
+
+/* Responsive: altura más baja en móviles */
+@media (max-width: 640px) {
+  .swiper { height: 420px; }
+}
